@@ -17,7 +17,10 @@ post '/try_a_post' do
 end
 
 put '/try_a_put' do
-  puts params
   redirect '/dinner'
+end
+
+delete '/try_a_delete' do
+  redirect '/'
 end
 
