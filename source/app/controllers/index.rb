@@ -11,3 +11,7 @@ end
 get '/dinner' do
   File.read(File.join('..', '..', 'public', 'index_3.html'))
 end
+
+post '/try_a_post' do
+  redirect '/'
+end

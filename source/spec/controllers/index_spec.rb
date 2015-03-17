@@ -20,4 +20,12 @@ describe 'Index Controller' do
       expect(last_response.body).to include('Dinner Bell! Dinnnnngggg')
   end
 
+  it 'Should process the post/try_a_post route' do
+      post '/try_a_post'
+      expect(last_response).to be_redirect
+      follow_redirect!
+      expect(last_response).to be_ok
+      expect(last_response.body).to include('Welcome to Pier 93')
+  end
+
 end
