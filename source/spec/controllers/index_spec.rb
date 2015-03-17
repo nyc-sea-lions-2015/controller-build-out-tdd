@@ -43,4 +43,12 @@ describe 'Index Controller' do
     expect(last_response).to be_ok
     expect(last_response.body).to include('Welcome to Pier 93')
   end
+
+  it 'Should verify a delete route' do
+    delete '/try_a_delete'
+    expect(last_response).to be_redirect
+    follow_redirect!
+    expect(last_response).to be_ok
+    expect(last_response.body).to include('Welcome to Pier 93')
+  end
 end
