@@ -35,4 +35,12 @@ describe 'Index Controller' do
     expect(last_response).to be_ok
     expect(last_response.body).to include('Dinner Bell! Dinnnnngggg')
   end
+
+  it 'Should do an http delete to the route \'/try_a_delete\'' do
+    delete '/try_a_delete'
+    expect(last_response).to be_redirect
+    follow_redirect!
+    expect(last_response).to be 200
+    expect(last_response.body).to include('Welcome to Pier 93')
+  end
 end

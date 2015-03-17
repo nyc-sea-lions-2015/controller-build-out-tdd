@@ -20,3 +20,4 @@ put '/try_a_put' do
   puts params
   redirect '/dinner'
 end
+
