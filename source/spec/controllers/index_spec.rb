@@ -36,8 +36,8 @@ it 'does an http post to the route /try_a_put' do
     expect(last_response.body).to include('Welcome to Pier 39')
 end
 
-it 'does an http post to the route /try_a_put' do
-    put '/try_a_put/with_a_param=true'
+it 'does an http delete to the route /try_a_delete' do
+    delete '/try_a_delete'
     expect(last_response).to be_redirect
     follow_redirect!
     expect(last_response).to be_ok
