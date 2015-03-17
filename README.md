@@ -1,7 +1,7 @@
 # Test Driven Development Controllers
 
 ## Summary
-In this challenge we will build out our Index.rb controller using Test Driven Development (TDD). The challenge will introduce you to RSpec and testing controllers. 
+In this challenge we will build out our Index.rb controller using Test Driven Development (TDD). The challenge will introduce you to RSpec and testing controllers.
 
 You will write tests for each of the HTTP Verbs (Get, Post, Put, Delete) and make sure that your routes follow basic Request / Response flow for each of the verbs.
 
@@ -18,7 +18,7 @@ You will write tests for each of the HTTP Verbs (Get, Post, Put, Delete) and mak
 
 ## Releases
 
-### Release 0: Testing a get 
+### Release 0: Testing a get
 Make a file called index_spec.rb in the ```spec/controller``` folder. Then add the following three tests:
 
 1. Ensure that a request to the root path '/' returns the index.html file in the response body.
@@ -28,7 +28,7 @@ Make a file called index_spec.rb in the ```spec/controller``` folder. Then add t
 After setting up the test, run them with rspec.
 
 ```
-$ rspec spec/controllers/index_spec.rb 
+$ rspec spec/controllers/index_spec.rb
 ```
 
 You should get 2 failing tests and 1 passing tests
@@ -36,7 +36,7 @@ You should get 2 failing tests and 1 passing tests
 Now add the correct routes, and add the correct static index.html file to the response body. If you've done it correctly you should get three passing tests.
 
 
-### Release 1: Testing a post 
+### Release 1: Testing a post
 Back in the index_spec.rb add a single test that:
 
 - does an http post to the route '/try_a_post'
@@ -47,7 +47,7 @@ Back in the index_spec.rb add a single test that:
 After setting up the test, run them with rspec.
 
 ```
-$ rspec spec/controllers/index_spec.rb 
+$ rspec spec/controllers/index_spec.rb
 ```
 You should get 1 failing test, and 3 passing tests
 
@@ -65,7 +65,7 @@ This time in the index_spec.rb we are going to test a put method, with some para
 After setting up the test, run them with rspec.
 
 ```
-$ rspec spec/controllers/index_spec.rb 
+$ rspec spec/controllers/index_spec.rb
 ```
 You should get 1 failing test, and 4 passing tests
 
@@ -83,7 +83,7 @@ Finally in the index_spec.rb add the test that:
 After setting up the test, run them with rspec.
 
 ```
-$ rspec spec/controllers/index_spec.rb 
+$ rspec spec/controllers/index_spec.rb
 ```
 You should get 1 failing test, and 5 passing tests
 
@@ -100,7 +100,7 @@ For the finally release you are to create two new controllers in the ```app/cont
 - update_routes.rb
 - get_routes.rb
 
-Move all of the update verbs into the update_routes.rb controller. 
+Move all of the update verbs into the update_routes.rb controller.
 
 Run your tests - They should still all pass.
 
@@ -108,7 +108,7 @@ Next move all of your get routes besides '/' to the get_routes.rb file
 
 Run your tests - They should still all pass.
 
-Now just for fun, say you were migrating your routes. Then you were distracted by the lunch bell, and you forgot to move the '/index2' get route. (Simulate this by commenting out the entire get '/index2' do block). 
+Now just for fun, say you were migrating your routes. Then you were distracted by the lunch bell, and you forgot to move the '/index2' get route. (Simulate this by commenting out the entire get '/index2' do block).
 
 Run all of your tests.
 
@@ -116,8 +116,8 @@ You should get 1 failing test, and 5 passing tests.
 
 Let's uncomment that sucker, and get everything green again!
 
-Good Work! 
+Good Work!
 
 ## Conclusion
-After finishing the challenge, you should be able to create tests for the Get, Post, Put, and Delete verbs. Send parameters to the requests for use in the controllers. Lastly understand that having good test coverage allows you to refactor with ease. 
+After finishing the challenge, you should be able to create tests for the Get, Post, Put, and Delete verbs. Send parameters to the requests for use in the controllers. Lastly understand that having good test coverage allows you to refactor with ease.
 
