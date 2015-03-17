@@ -33,4 +33,12 @@ describe 'Index Controller' do
     follow_redirect!
     expect(last_response.body).to include('Welcome to Pier 39')
   end
+
+  it 'should redirect to / route' do
+    delete '/try_a_delete'
+    expect(last_response).to be_redirect
+    follow_redirect!
+    expect(last_response.body).to include('Welcome to Pier 39')
+  end
+
 end
