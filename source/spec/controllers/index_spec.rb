@@ -15,7 +15,7 @@ describe 'IndexController' do
   end
 
   it "should process the put /try_a_put route with_a_param=true" do
-    put "/try_a_put"
+    put "/try_a_put",:params=> {with_a_param: true}
     expect(last_response).to be_redirect
     follow_redirect!
     expect(last_response.body).to include("Hello from index!")
