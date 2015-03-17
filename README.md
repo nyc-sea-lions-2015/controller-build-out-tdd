@@ -2,28 +2,46 @@
 
 
 ## Summary
-Introduce the challenge to the students. After reading the Summary section, students should have a solid understanding of how this specific challenge relates to the overall curriculum:
+In this challenge we will build out our Index.rb controller using Test Driven Development (TDD). The challenge will introduce you to RSpec and testing controllers. 
 
-- what students will be learning in this challenge
-- how this challenge relates to previous challenges
-- how this challenge relates to future challenges
+You will write tests for each of the HTTP Verbs (Get, Post, Put, Delete) and make sure that your routes follow basic Request / Response flow for each of the verbs.
+
 
 ### New Technology/Concept
-Provide a frame of reference for any new technologies or concepts that they will encounter in the challenge. If the challenge requires students to use a new technology, (e.g., a gem), state how the gem will be used in the challenge, link to the docs, and consider providing some example code to kickstart the student.  If the challenge introduces a new concept (e.g. lazy evaluation), provide the student with some background information on the concept and how it will be used in this challenge.
 
-### Other New Technology/Concept
-If more than one new technology or concept is introduced in the challenge, add a subsection for each.
-
+- [Static File Rendering](http://stackoverflow.com/questions/2437390/serving-static-files-with-sinatra) in Sinatra
+	- We will be rendering static html files from the server as our response body.
+- [RSpec Request / Response](http://www.sinatrarb.com/testing.html) testing
+	- TDD will require us to use basic http verb testing methods
+- [RSpec Matchers](http://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
+	- You will need to use the correct matchers to validate the response body
+	
 
 ## Releases
-### Pre-release: Description
-The Pre-release subsection is optional.  Use a Pre-release subsection if students need to perform some setup before beginning the challenge (e.g., seed a database).  The Pre-release subsection should provide directions on how to setup the challenge and a description about what the setup is providing.  Depending on how familiar students are expected to be with performing the set up procedures, the directions might be more or less explicit.  If the setup procedures are new to the students, walk them through the commands they need to run (e.g., "From the command line, run `rake db:seed`").  If students should be familiar with the setup procedures, it might be appropriate to tell them what needs to be done (e.g., "Seed the database").
 
-### Release 0: Description
-The Release 0 subsection is the only required subsection of the Releases section. Detail the requirements of the challenge; it should be clear to students what success for this challenge looks like.
+### Release 0: Testing a get 
+Make a file called index_spec.rb in the ```spec/ontroller``` folder. Then add the following three tests:
 
-### Release 1: Description
-If completing the challenge should be done in steps, then detail each step in its own numbered subsection as appropriate.  Each subsection should have a clearly defined outcome.
+1. Ensure that a request to the root path '/' returns the index.html file in the response body.
+2. Ensure that a request to the index2 path '/index2' returns the index_2.html file in the response body.
+3. Ensure that a request to the dinner path '/index3' returns the index_3 file in the response body.
+
+After setting up the test, run them with rspec.
+
+```
+$ rspec spec/controllers/index_spec.rb 
+```
+
+Now add the correct routes, and add the correct static index.html file to the response body. If you've done it correctly you should get three passing tests.
+
+
+### Release 1: Testing a post 
+
+### Release 2: Testing a put
+
+### Release 3: Testing a delete
+
+### Release 4: Refactoring
 
 ## Conclusion
-Provide the students with some closure for the challenge.  Reinforce why students completed this challenge and provide a check on whether they have achieved the desired learning from the challenge.
+After finishing the challenge, you should be 
