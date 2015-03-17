@@ -28,4 +28,12 @@ it 'Should process the post/try_a_post route' do
   expect(last_response.body).to include('Welcome to Pier 93')
 end
 
+it 'Should process the put/try_a_put route' do
+  put '/try_a_put', :params => with_a_param=true
+  expect(last_response).to be_redirect
+  follow_redirect!
+  expect(last_response).to be_ok
+  expect(last_response.body).to include('Welcome to Pier 93')
+end
+
 end
