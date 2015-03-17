@@ -1,4 +1,5 @@
-require './app/controllers/index'
+require './app/controllers/get_routes'
+require './app/controllers/update_routes'
 require './spec/spec_helper'
 
 describe 'Index Controller' do
@@ -38,7 +39,7 @@ describe 'Index Controller' do
       expect(last_response).to be_redirect
       follow_redirect!
       expect(last_response).to be_ok
-      expect(last_response.body).to include('Hello World')
+      expect(last_response.body).to include('Welcome to Pier 93')
   end
 
   it 'Should update an existing route' do
@@ -46,7 +47,7 @@ describe 'Index Controller' do
       expect(last_response).to be_redirect
       follow_redirect!
       expect(last_response).to be_ok
-      expect(last_response.body).to include('Hello World')
+      expect(last_response.body).to include('Welcome to Pier 93')
   end
 
   it 'Should delete existing route' do
@@ -54,6 +55,6 @@ describe 'Index Controller' do
       expect(last_response).to be_redirect
       follow_redirect!
       expect(last_response).to be_ok
-      expect(last_response.body).to include('Hello World')
+      expect(last_response.body).to include('Welcome to Pier 93')
   end
 end
