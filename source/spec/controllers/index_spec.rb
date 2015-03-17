@@ -27,4 +27,10 @@ describe 'Index Controller' do
     expect(last_response.body).to include('Welcome to Pier 39')
   end
 
+  it 'should redirect to / route' do
+    put '/try_a_put', :params => {with_a_param: true}
+    expect(last_response).to be_redirect
+    follow_redirect!
+    expect(last_response.body).to include('Welcome to Pier 39')
+  end
 end
