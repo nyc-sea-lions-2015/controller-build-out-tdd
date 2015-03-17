@@ -21,3 +21,19 @@ end
 get '/dinner' do
     'Dinner Bell! Dinnnnngggg'
 end
+
+post '/try_a_post' do
+    redirect '/posted'
+end
+
+get '/posted' do
+    'Hello World'
+end
+
+put '/try_a_put' do
+    redirect '/posted'
+end
+
+delete '/try_a_delete' do
+    redirect '/posted'
+end
