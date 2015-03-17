@@ -1,26 +1,26 @@
-get '/' do
-  File.read(File.join('..', '..', 'public','index.html'))
-  # Above we added path parameters '..' to find the right directory to open
-  # File.read('../../public/index.html')
-end
+# get '/' do
+#   File.read(File.join('..', '..', 'public','index.html'))
+#   # Above we added path parameters '..' to find the right directory to open
+#   # File.read('../../public/index.html')
+# end
 
-get '/schedule' do
-  File.read(File.join('..', '..', 'public', 'index_2.html'))
-end
+# get '/schedule' do
+#   File.read(File.join('..', '..', 'public', 'index_2.html'))
+# end
 
-get '/dinner' do
-  File.read(File.join('..', '..', 'public', 'index_3.html'))
-end
+# get '/dinner' do
+#   File.read(File.join('..', '..', 'public', 'index_3.html'))
+# end
 
-post '/try_a_post' do
-  redirect '/'
-end
+# post '/try_a_post' do
+#   redirect '/'
+# end
 
-put '/try_a_put' do
-  redirect '/dinner'
-end
+# put '/try_a_put' do
+#   redirect '/dinner'
+# end
 
-delete '/try_a_delete' do
-  redirect '/'
-end
+# delete '/try_a_delete' do
+#   redirect '/'
+# end
 
