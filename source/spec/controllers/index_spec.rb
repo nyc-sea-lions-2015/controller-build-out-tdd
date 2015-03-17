@@ -15,3 +15,11 @@ describe 'Index2Controller' do
     expect(last_response.body).to include('Hello from second index!')
   end
 end
+
+describe 'Index3Controller' do
+  it 'should process the get /index3 route' do
+    get '/index3'
+    expect(last_response).to be_ok
+    expect(last_response.body).to include('Hello from third index!')
+  end
+end
