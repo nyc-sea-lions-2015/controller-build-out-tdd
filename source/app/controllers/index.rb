@@ -1,28 +1,10 @@
-get '/' do
-  #File.read(File.join('public','index.html'))
-  'Welcome to Pier 39'
+get '/index2' do
+  File.read(File.join('public','index_2.html'))
 end
 
-post '/another' do
-  redirect '/schedule'
+get '/index3' do
+  File.read(File.join('public','index_3.html'))
 end
 
-get '/schedule' do
-  "We have a lot to do today!"
-end
 
-get '/dinner' do
-  'Dinner Bell! Dinnnnngggg'
-end
 
-post '/try_a_post' do
-  redirect '/'
-end
-
-put '/try_a_put' do
-  redirect '/'
-end
-
-delete '/try_a_delete' do
-  redirect '/'
-end

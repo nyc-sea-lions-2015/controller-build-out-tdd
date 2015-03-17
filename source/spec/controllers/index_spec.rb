@@ -8,6 +8,18 @@ describe 'Index Controller' do
       expect(last_response.body).to include('Welcome to Pier 39')
   end
 
+  it 'should get the index_2.html' do
+    get '/index2'
+    expect(last_response).to be_ok
+    expect(last_response.body).to include('This is the second index page')
+  end
+
+  it 'should get the index_3.html' do
+    get '/index3'
+    expect(last_response).to be_ok
+    expect(last_response.body).to include('This is the third index page')
+  end
+
   it 'Should get the /another route' do
       get '/schedule'
       expect(last_response).to be_ok
@@ -40,5 +52,4 @@ describe 'Index Controller' do
     follow_redirect!
     expect(last_response.body).to include('Welcome to Pier 39')
   end
-
 end
