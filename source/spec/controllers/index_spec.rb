@@ -17,6 +17,14 @@ describe 'Index Controller' do
     expect(last_response.body).to include(index_text)
   end
 
+  it "Should process a put request to '/try_a_put'" do
+    put '/try_a_put', :params => {food: 'crab'}
+    expect(last_response).to be_redirect
+    follow_redirect!
+    expect(last_response).to be_ok
+    expect(last_response.body).to include(index_text)
+  end
+
   # it 'Should get the /another route' do
   #   get '/schedule'
   #   expect(last_response).to be_ok
